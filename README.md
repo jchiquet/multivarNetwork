@@ -4,7 +4,7 @@ R package for inferring multi-variate/multi-attribute Gaussian graphical models
 ## installation
 
 Check the dependencies first: **parallel**, **pbmcapply**,
-**Matrix**, **glmnet**, **gglasso**, **stabsel**
+**Matrix**, **glmnet**, **gglasso**, **stabs**
 
 ```
 devtools::install_github("jchiquet/multivarNetwork")

@@ -4,8 +4,9 @@
 \alias{multivarNetwork}
 \title{Fit a collection of networks from multivariate experiments}
 \usage{
-multivarNetwork(X, sym.rule = "AND", cv.choice = c("none", "1se", "min"),
-  nlambda = 50, min.ratio = 0.001, mc.cores = 1)
+multivarNetwork(X, sym.rule = "AND", select = c("none", "1se", "min",
+  "stabsel"), nlambda = 50, min.ratio = 0.001, mc.cores = 1, nfold = 5,
+  cutoff = 0.75)
 }
 \arguments{
 \item{X}{a list of matrices with the same dimension, corresponding to multiple experiments related
@@ -13,7 +14,7 @@ to the same individuals and variables, e.g., proteomics and transcriptomics data
 
 \item{sym.rule}{a character, either "AND" or "OR" to define the  post-symmetrization rule applied to the coefficients in neighborhood selection}
 
-\item{cv.choice}{a character for defining the cross-validation rule used to choose the penalty level (i.e., the number of edges in the the network).
+\item{select}{a character for defining the cross-validation rule used to choose the penalty level (i.e., the number of edges in the the network).
 If "none", the whole regulariazation paths is sent back. If "min" or "1se", penalties are cross-validation for each variable
 with the corresponding rule.}
 
